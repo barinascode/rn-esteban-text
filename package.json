@@ -1,0 +1,19 @@
+{
+  "name": "rn-esteban-text",
+  "version": "0.1.0",
+  "description": "React native text sistem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barinascode/rn-esteban-text.git"
+  },
+  "author": "Leonardo Tapia <barinas.code@gmail.com> (https://solucionesinformaticasbarinas.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barinascode/rn-esteban-text/issues"
+  },
+  "homepage": "https://github.com/barinascode/rn-esteban-text#readme"
+}
