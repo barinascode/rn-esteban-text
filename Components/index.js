@@ -5,6 +5,38 @@ import Theme from '../../../assets/styles'
 function index(props){
     
     let styles = {}
+    const { mb10, mb20, mb30, mb40, mb50, mb60, mb70, mb80, mb90, mb100 } = props
+
+        
+    if(mb10)
+    styles.marginBottom = 10
+    
+    if(mb20)
+      styles.marginBottom = 20
+
+    if(mb30)
+      styles.marginBottom = 30
+
+    if(mb40 )
+      styles.marginBottom = 40
+
+    if(mb50 )
+      styles.marginBottom = 50
+
+    if(mb60 )
+      styles.marginBottom = 60
+
+    if(mb70 )
+      styles.marginBottom = 70
+
+    if(mb80 )
+      styles.marginBottom = 80
+
+    if(mb90 )
+      styles.marginBottom = 90
+
+    if(mb100 )
+      styles.marginBottom = 100
 
     if( props.tiny )
         styles.fontSize = Theme.tinyText
@@ -16,6 +48,9 @@ function index(props){
 
     if( props.big )
         styles.fontSize = Theme.bigText
+
+    if( props.mr1 )
+        styles.marginRight = 10
 
 
     if( props.gigant )
