@@ -5,97 +5,134 @@ import Theme from '../../../assets/styles'
 function index(props){
     
     let styles = {}
-    const { mb10, mb20, mb30, mb40, mb50, mb60, mb70, mb80, mb90, mb100 } = props
+    const { 
 
-        
-    if(mb10)
-    styles.marginBottom = 10
-    
-    if(mb20)
-      styles.marginBottom = 20
+      /*
+        @Inject style section
+      */
+      style,
 
-    if(mb30)
-      styles.marginBottom = 30
 
-    if(mb40 )
-      styles.marginBottom = 40
 
-    if(mb50 )
-      styles.marginBottom = 50
+      /*
+        @Font size section
+      */
+      tiny,
+      small, 
+      big, 
+      gigant, 
+      superGigant, 
 
-    if(mb60 )
-      styles.marginBottom = 60
 
-    if(mb70 )
-      styles.marginBottom = 70
 
-    if(mb80 )
-      styles.marginBottom = 80
+      /*
+        @Theme color section
+      */
+      primary, 
+      primaryContrast,
+      negativeContrast,
+      disabledContrast,
+      disabled,
+      white,
+      black,
 
-    if(mb90 )
-      styles.marginBottom = 90
 
-    if(mb100 )
-      styles.marginBottom = 100
 
-    if( props.tiny )
+     /*
+        Font weight section
+     */ 
+      bold,
+
+
+      
+      /*
+        Alignment section
+      */ 
+      center,
+      left,
+      right
+
+
+
+     } = props
+
+     
+     if( bold )
+      styles.fontWeight = 'bold'
+
+
+     /*
+        Font size section
+     */
+
+    if( tiny )
         styles.fontSize = Theme.tinyText
 
-        
-    if( props.small )
-        styles.fontSize = Theme.smallText
+    if( small )
+      styles.fontSize = Theme.smallText
+
+    if( big )
+      styles.fontSize = Theme.bigText
+
+    if( gigant )
+      styles.fontSize = Theme.gigantText
+
+    if( superGigant )
+      styles.fontSize = Theme.superGigantText
 
 
-    if( props.big )
-        styles.fontSize = Theme.bigText
+     /*
+        Theme color section
+     */
 
-    if( props.mr1 )
-        styles.marginRight = 10
+    if( primary )
+      styles.color = Theme.primaryColor
+
+    if( primaryContrast )
+      styles.color = Theme.primaryColorContrast
+
+    if( negativeContrast )
+      styles.color = Theme.negativeContrast
+
+    if( disabledContrast )
+      styles.color = Theme.disabledColorContrast
+
+    if( disabled )
+      styles.color = Theme.disabledColor
 
 
-    if( props.gigant )
-        styles.fontSize = Theme.gigantText
 
-    if( props.superGigant )
-        styles.fontSize = Theme.superGigantText
+    /*
+      Default color section
+    */
 
-
-    if( props.primary )
-        styles.color = Theme.primaryColor
-
-    if( props.primaryContrast )
-        styles.color = Theme.primaryColorContrast
-
-    if( props.negativeContrast )
-        styles.color = Theme.negativeContrast
-
-    if( props.disabledContrast )
-        styles.color = Theme.disabledColorContrast
-
-    if( props.disabled )
-    styles.color = Theme.disabledColor
-
-    if( props.white )
+    if( white )
         styles.color = 'white'
+    
+    if( black )
+        styles.color = 'black'
 
-    if( props.big )
-        styles.fontSize = Theme.bigText
 
 
-    if( props.bold )
-        styles.fontWeight = 'bold'
-
-    if(props.center)
+    /*
+      Alignment section
+    */   
+    if( center )
         styles.textAlign = 'center'
 
-    if(props.left)
+    if( left )
         styles.textAlign = 'left'
 
-    if(props.right)
+    if( right )
         styles.textAlign = 'right'
 
-    return <Text style={styles}>{ props.children }</Text>
+
+        
+    return <Text style={{ ...styles, ...style }}>{ props.children }</Text>
+
 
 }
+
+
 
 export default index
